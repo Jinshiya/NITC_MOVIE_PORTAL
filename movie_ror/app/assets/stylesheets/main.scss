@@ -1,0 +1,63 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.some{
+	padding: 100Px;
+}
+.heading{
+	color: 	#333; 
+	font-size: 48px; 
+	font-family: 'Signika', sans-serif;
+	 padding-bottom: 10px; 
+	  color: #D0F8FF;
+    text-shadow: 0 0 5px 	#333, 0 0 10px #D0F8FF,
+             0 0 20px 	#333, 0 0 30px #D0F8FF,
+             0 0 40px #333;
+}
+.button{
+	border-radius:5px/5px;
+	color:#333;
+	display:inline-block;
+	font-weight:bold;
+	width:250px;
+	text-align:center;
+	line-height:30px;
+	text-decoration:none;
+	height:50px;
+	margin-bottom:20px;
+	margin-left :200px;
+	border:none;
+	outline:0;
+	cursor: pointer;
+	padding: 100Px;
+}
+.input{
+	width:270px;
+    padding:15px 20px;
+    font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	background: #333;
+	border:none;	
+	color: #FDFDF0;
+	font-size: 14px;
+	margin-top:15px;
+}
+.input1{
+	width:270px;
+    padding:15px 20px;
+    font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	background: #333;
+	border:none;	
+	font-size: 14px;
+	margin-top:15px;
+}
+body{
+	background-color:#2c3335;
+	color:#f5f5f5;
+	text-align:center;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+.bg
+ {
+background-image: url("/assets/theme.jpg");
+}

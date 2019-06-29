@@ -1,0 +1,41 @@
+<br/><h2 style="text-align:center">Groups Available</h2>
+<% if flash[:success]  %>
+
+<font color="green"><strong>
+	<%= flash[:success]  %></strong>
+</font>
+<% end %>
+<% if flash[:failure]  %>
+
+<font color="red"><strong>
+	<%= flash[:failure]  %></strong>
+</font>
+<% end %>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<div class="groups">
+<center>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+			<th>Group Name</th>
+			<th>Admin</th>
+		</tr>
+		</thead>
+		<tbody>
+		<% @group.each do |x| %>
+			<tr>
+				<td><%= x.gname %></td>
+				<td><%= x.admin %></td>
+				<td>	
+					<%= link_to "Join" ,controller:"group",action:"join",bid:x.id,user:session[:user] %></br>
+				</td>
+			</tr>
+		</tbody>
+		<% end %>
+	</table>
+	</center>
+</div>

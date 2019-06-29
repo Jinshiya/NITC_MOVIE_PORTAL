@@ -1,0 +1,26 @@
+<br/><h2 style="text-align:center">Messages</h2>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<div class="messages">
+<center>
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th>Group Name</th>
+			<th>Message</th>
+		</tr>
+		</thead>
+		<tbody>
+		<% @msg.each do |x| %>
+			<tr>
+				<td><%= x.gname %></td>
+				<td><%= x.message %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+	</center>
+</div>

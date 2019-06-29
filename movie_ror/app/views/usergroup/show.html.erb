@@ -1,0 +1,35 @@
+<br/><h2 style="text-align:center">Groups Available</h2>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<font color="green"><strong>
+	<%= flash[:success]  %></strong>
+</font>
+<div class="approvals">
+<center>
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th>User</th>
+			<th>Group Id</th>
+		</tr>
+		</thead>
+		<tbody>
+		<% @ugroup.each do |x| %>
+			<tr>
+				<td><%= x.uname %></td>
+				<td><%= x.gname %></td>
+				<td>	
+					<%= link_to "Accept to Group" ,action:"approve",gname:x.gname,user:x.uname,status:"A" %></br>
+				</td>
+				<td>	
+					<%= link_to "Reject Request" ,action:"reject",gname:x.gname,user:x.uname,status:"A" %></br>
+				</td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+	</center>
+</div>

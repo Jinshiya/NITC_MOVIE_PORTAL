@@ -1,0 +1,42 @@
+<center>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  <nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li><%= link_to "Sign Out " ,controller:"session",action:"destroy" %></li>
+  </ul>
+</nav>
+<div class="jumbotron text-center">
+  <h1>Welcome !!</h1>
+  <p><%=@uname%>'s Home page</p> 
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>View Movies</h3>
+      <%= link_to "View movies " ,controller:"movie",action:"show" %>
+      <p>View and Grab your tickets for the latest shows</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Join Existing Groups</h3>
+      <%= link_to "Join Existing groups " ,controller:"group",action:"show",user:session[:user] %>
+      <p>Want to meet people as crazy as you ?? Join the groups</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Accept Invitations for your group</h3>        
+      <%= link_to "Accept Invitation for my group " ,controller:"usergroup",action:"show",uname:session[:user] %>
+      <p>Beep!! Beep !! People are waiting for you to accept them to your group :D</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>View Messages</h3>        
+      <%= link_to "View Messages" ,controller:"message",action:"show",uname:session[:user] %>
+      <p>Group messages</p>
+    </div>
+  </div>
+</div>
+</center>

@@ -1,0 +1,42 @@
+<br/><h2 style="text-align:center">Movies Available</h2>
+<% if flash[:notice]  %>
+
+<font color="red"><strong>
+	<%= flash[:notice]  %></strong>
+</font>
+<% end %>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<div class="movies">
+<center>
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th>Banner</th>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Language</th>
+		</tr>
+		</thead>
+		<tbody>
+		<% @movie.each do |x| %>
+			<tr>
+				<td><img src="<%= x.picture %>" height="100" width="100"></img></td>
+				<%#<img src="<%= x.picture %><%#{}" class="img-rounded" >%>
+				<td><%= x.mname %></td>
+				<td><%= x.mtype %></td>
+				<td><%= x.lang %></td>
+				<td>	
+					<%= link_to "Book" ,action:"book",bid:x.id,user:session[:user] %></br>
+				</td>
+			</tr>
+		<% end %>
+		</tbody>
+
+	</table>
+	</center>
+</div>

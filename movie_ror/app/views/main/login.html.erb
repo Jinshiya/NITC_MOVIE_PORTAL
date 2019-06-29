@@ -1,0 +1,57 @@
+<div class="bg">
+<div class ="input"><%= link_to "SignUp" ,controller: "user" ,action:"create_user" %></div>
+<center>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<H1 class = "heading">NITC MOVIE PORTAL</H1></br>
+<% if flash[:notice]  %>
+
+<font color="green"><strong>
+	<%= flash[:notice]  %></strong>
+</font>
+<% end %>
+<% if flash[:notice_err]  %>
+
+<font color="red"><strong>
+	<%= flash[:notice_err]  %></strong>
+</font>
+<% end %>
+	<%= form_tag(action:"login",method:"post") do %>
+	<body>
+		<center>
+			<table>
+				<tr>
+					<td class="input" ><%= label_tag :uname,"User Name:" %></td>
+					<td class="input1"><%= text_field_tag(:uname) %></br></td>
+				</tr>
+
+				<tr>
+					<td class="input"><%= label_tag :password,"Password:" %></td>
+					<td class="input1"><%= password_field_tag(:password) %></td>
+				</tr>
+				</tr>
+				<tr><td class="button"><%= submit_tag("            LOGIN           ")%></td></tr>
+			</br>
+			</table>
+		</center>
+		</body>
+	<% end %> 
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+</center>
+	</div>
